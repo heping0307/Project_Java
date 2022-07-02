@@ -6,7 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /*
     controller调用service，service调用dao；
-    因此在开发上面一般先是开发dao，在开发service，然后开发controller
+    因此在开发上面一般先是开发dao，再开发service，然后开发controller
+    先开发数据访问层，再开发业务层，然后开发视图层；
  */
 @SpringBootApplication
 public class CommunityApplication {
