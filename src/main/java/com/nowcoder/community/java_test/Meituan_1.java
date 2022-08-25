@@ -1,4 +1,4 @@
-package com.nowcoder.community.train;
+package com.nowcoder.community.java_test;
 
 import java.util.Arrays;
 

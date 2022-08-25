@@ -10,7 +10,7 @@ public interface LoginTicketMapper {
             "insert into login_ticket(user_id,ticket,status,expired) ",
             "values(#{userId},#{ticket},#{status},#{expired})"
     })
-    @Options(useGeneratedKeys = true, keyProperty = "id")  //自动生成主键
+    @Options(useGeneratedKeys = true, keyProperty = "id")
     int insertLoginTicket(LoginTicket loginTicket);
 
     @Select({
@@ -18,8 +18,6 @@ public interface LoginTicketMapper {
             "from login_ticket where ticket=#{ticket}"
     })
     LoginTicket selectByTicket(String ticket);
-
-//    "<script>","</script>",表示脚本
 
     @Update({
             "<script>",
@@ -30,7 +28,5 @@ public interface LoginTicketMapper {
             "</script>"
     })
     int updateStatus(String ticket, int status);
-
-
 
 }
